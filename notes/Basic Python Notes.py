@@ -74,7 +74,7 @@ say_it()
 
 # f(x) = 2x + 3
 def f(x):
-    print(2*x + 3)
+    print(2 * x + 3)
 
 
 f(1)
@@ -83,7 +83,7 @@ f(5000)
 
 
 def distance(x1, y1, x2, y2):
-    dist = ((x2-x1)**2 + (y2-y1)**2)**(1/2)
+    dist = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** (1 / 2)
     print(dist)
 
 
@@ -98,7 +98,7 @@ for i in range(5):  # Range (5) gives that numbers 0-4
     f(i)
 
 for i in range(5):
-    print(i**2)
+    print(i ** 2)
 
 # While loops
 a = 0
@@ -106,13 +106,11 @@ while a < 10:
     print(a)
     a += 1  # This is the same as a = a + 1
 
-
 """
 Hints for loops:
 For loops - Use when you know EXACTLY how many iterations
 While loops - Use when you DON'T know how many iterations
 """
-
 
 # Control  Statements (If statements)
 sunny = False
@@ -123,7 +121,7 @@ if sunny:
 def grade_calc(percentage):
     if percentage >= 90:
         return "A"
-   elif percentage >= 80:
+    elif percentage >= 80:
         return "B"
     elif percentage >= 70:
         return "C"
@@ -137,7 +135,92 @@ your_grade = grade_calc(82)
 print(your_grade)
 
 # Random numbers
-import random    # This Should be on line 1
-print(random.randtint(0, 100))
+import random  # This should be on line 1
+print(random.randint(0, 100))
 
+# Equality Statements
+print(5 > 3)
+print(5 >= 3)
+print(3 == 3)
+print(3 != 4)
+"""
+a = 3 # A is set to 3 
+a == 3 # Is a equal to 3?
+"""
 
+# creating a list
+fruit = ['apple', 'orange', 'blackberries', 'strawberries',
+         'blueberries', "raspberries", "pineapple", "mango", "coconut"]  # Use Square Bracket
+print(fruit)
+
+# pulling items form a list
+print(fruit[1])
+
+# getting the length of a list
+print(len(fruit))
+print("The length of the list is %d" % len(fruit))
+
+# Modifying Lists
+fruit[8] = 'banana'
+print(fruit)
+
+# Looping through List
+for item in fruit:
+    print(item)
+
+food_list = ["pizza", "tamales", "tacos", "pie", "enchiladas", "burrito",
+             "sushi", "poke", "flan", "poutine", "noodles", "chicken",
+             'chili', "Hot wings", "salmon", "chips", "lasagna", "soup"
+             "fettuccine", "salad", "carne asada"]
+
+# slicing
+print(food_list[2:5])
+print(food_list[3:4])
+print(food_list[10:])
+print(food_list[:5])
+
+# Adding stuff to a list (part 1)
+food_list.append("oranges")
+food_list.append("bacon")
+print(food_list)
+# Everything is in the form Object.method(parameters)
+
+# Adding to a list  (not at the end)
+food_list.insert(2, "Goat")
+print(food_list)
+
+# Removing from a list
+food_list.remove("tacos")
+food_list.remove("pie")
+print(food_list)
+# This removes the specific item from the list
+
+# Removing from a list (part 2)
+# Sometimes, you don't know what is in the list, but
+# You want to get rid of something at a specific
+food_list.pop(0)
+print(food_list)
+# Notice that "pizza" is no longer in the because was is at index 0.
+
+# practice item...
+
+sport_list = ["Soccer", "football", "basketball"]
+
+sport_list.append(4, "golf")
+
+# Finding things in a list
+print(food_list.index("chicken"))
+# This printed 9 for me, so chicken must be at index 9.
+# This is for an easy way of finding things in a list.
+
+# Things I notice people do:
+# Some people have made lists with parentheses instead of brackets
+brand = ("apple", "samsung", "HTC")
+# This is a TUPLE, not a list. Tuples are immutable ( cannot be changed)
+
+# Changing things into a list
+string1 = "turquoise"
+list1 = list(string1)
+print(list1)
+
+# changing back into a string (list →
