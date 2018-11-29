@@ -223,4 +223,10 @@ string1 = "turquoise"
 list1 = list(string1)
 print(list1)
 
-# changing back into a string (list →
+for i in range(len(list1)):  # i goes through all indices
+    if list1[i] == "u": # if we find a "u"
+        list1.pop(i) # Remove the i-th index
+        list1.index(i, "*")
+
+# changing back into a string (list→string)
+print("".join(list1))

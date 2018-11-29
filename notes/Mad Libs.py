@@ -6,4 +6,4 @@ verb = ["running", "walking", "laughing", "crying", "dancing"]
 
 noun = ["dog", "car", "mexico", "boy"]
 
-print"
+print "I will take trip Mexico", random.choice(adjective)
