@@ -13,5 +13,7 @@ print("%s?? Really???" % age)
 
 colors = ["red", "blue", "black","yellow", "orenge"]
 colors.append("cyan")
-
+colors.pop(0)
 print(colors)
+print(colors[1])
+print(len(colors))
