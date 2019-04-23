@@ -74,19 +74,17 @@ class Chevrolet(Vehicle):
     def __init__(self):
         super(Chevrolet, self).__init__("Chevrolet")
 
+    class Armor(Item):
+        def __init__(self, name, armor_amt):
+            super(Armor, self).__init__(name)
+            self.armor_amt = armor_amt
 
-class Armor(Item):
-    def __init__(self, name, armor_amt):
-        self(Armor).__init__(name)
-        self.armor_amt = armor_amt
-
-
-class Character(object):
-    def __init__(self, name, health, weapon, armor):
-        self.name = name
-        self.health = health
-        self.weapon = weapon
-        self.armor = armor
+    class Character(object):
+        def __init__(self, name, health, weapon, armor):
+            self.name = name
+            self.health = health
+            self.weapon = weapon
+            self.armor = armor
 
     def take_damage(self, damage):
         if damage < self.armor.armor_amt:

@@ -7,6 +7,13 @@ class Room(object):
         self.description = description
 
 
+class Player(object):
+    def __init__(self, starting_location):
+        self.health = 100
+        self.inventory = []
+        self.current_location = starting_location
+
+
 # There are the instances of the room (Instantiation)
 
 Master_Room = Room("This is the room you start in", None, None)
@@ -134,11 +141,20 @@ class Character(object):
         self.weapon = weapon
         self.armor = armor
 
+    def take_damage(self, damage):
+        if damage < self.armor.armor_amt:
+            print("No damage is done because of some FABULOUS armor!")
+        else:
+            self.health -= damage - self.armor.armor_amt
+            if self.health < 0:
+                self.health = 0
+                print("%s has fallen" % self.name)
+        print("%s has %d health left" % (self.name, self.health))
 
-class Player(Character):
-    def __init__(self, name, health, weapon, armour):
-        super(player, self).__init__(name, health, weapon, armour)
-        self.inventory = []
+    def attack(self, target):
+        print("%s attacks %s for %d damage" %
+              (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
 
 
 while playing:
@@ -174,23 +190,6 @@ for item in player.current_location.item:
     if Found_item is not Item_name:
         player.inventory.append(Found_item)
         player.current_location.item.remove(Found_item)
-
-
-def take_damage(self, damage):
-        if damage < self.armor.armor_amt:
-            print("No damage is done because of some FABULOUS armor!")
-        else:
-            self.health -= damage - self.armor.armor_amt
-            if self.health < 0:
-                self.health = 0
-                print("%s has fallen" % self.name)
-        print("%s has %d health left" % (self.name, self.health))
-
-
-def attack(self, target):
-        print("%s attacks %s for %d damage" %
-              (self.name, target.name, self.weapon.damage))
-        target.take_damage(self.weapon.damage)
 
 
 # Characters
