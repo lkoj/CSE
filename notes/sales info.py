@@ -14,7 +14,7 @@ with open("Sales Records.csv", "r") as csv_file_thing:
     vegetables_sales = 0
     baby_food_sales = 0
     cereal_sales = 0
-    sub_saharan_africa_total = 0
+    subsaharan_africa_total = 0
     middle_east_and_north_africa_total = 0
     australia_and_oceania_total = 0
     europe_total = 0
@@ -49,20 +49,20 @@ with open("Sales Records.csv", "r") as csv_file_thing:
             baby_food_sales += float(profits)
         if item_type == "Cereal":
             cereal_sales += float(profits)
-        if region == "Sub saharan Africa":
-            sub_saharan_africa_total += float
+        if region == "Sub-Saharan Africa":
+            subsaharan_africa_total += float(profits)
         if region == "Middle East and North Africa":
-            middle_east_and_north_africa_total += float
+            middle_east_and_north_africa_total += float(profits)
         if region == "Australia and Oceania":
-            australia_and_oceania_total += float
+            australia_and_oceania_total += float(profits)
         if region == "Europe":
-            europe_total += float
+            europe_total += float(profits)
         if region == "Asia":
-            asia_total += float
+            asia_total += float(profits)
         if region == "Central America and the caribbean":
-            central_america_and_the_caribbean_total += float
+            central_america_and_the_caribbean_total += float(profits)
         if region == "North America":
-            north_america_total += float
+            north_america_total += float(profits)
 
     print("Fruits", fruits_sales)
     print("Clothes", clothes_sales)
@@ -76,6 +76,9 @@ with open("Sales Records.csv", "r") as csv_file_thing:
     print("Vegetables", vegetables_sales)
     print("Baby food", baby_food_sales)
     print("Cereal", cereal_sales)
-    print("Sub Saharan Africa", sub_saharan_africa_total)
+    print("Sub-Saharan Africa", subsaharan_africa_total)
     print("Middle East and North Africa", middle_east_and_north_africa_total)
-    print("Australia and Oceania")
+    print("Australia and Oceania", australia_and_oceania_total)
+    print("Europe", europe_total)
+    print("Asia", asia_total)
+    print("North America", north_america_total)
